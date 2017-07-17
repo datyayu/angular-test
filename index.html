@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: #ccc;
+    }
+
+    .container {
+      width: 400px;
+      background: white;
+      margin: 2em auto;
+      padding: .5em;
+    }
+
+    .input {
+      box-sizing: border-box;
+      font-size: 1.5em;
+      margin-bottom: .25em;
+      padding: .5em;
+      width: 100%;
+    }
+
+    .test-component__value {
+      background-color: #d9edf7;
+      border-color: #bce8f1;
+      color: #31708f;
+      margin: 0;
+      padding: .75em .5em;
+    }
+
+    .test-component__error {
+      background-color: #f2dede;
+      border-color: #ebccd1;
+      color: #a94442;
+      margin: 0;
+      padding: .75em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" ng-app="app" ng-controller="appController">
+    <input type="number" class="input" ng-model="inputValue">
+    <test-component model="inputValue"></test-component>
+  </div>
+
+  <script src="/dist/bundle.js"></script>
+</body>
+
+</html>
